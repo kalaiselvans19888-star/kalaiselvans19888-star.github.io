@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Kalaiselvan S – IT Student Portfolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#EEF7F5; --surface:#FFFFFF; --ink:#0C2B33; --muted:#4B6A72; --line:#C5DDD8; --accent:#0B7A75; --lamp:#F2B632; --on-accent:#FFFFFF;
+  box-sizing:border-box; padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
+  color-scheme:light;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){--bg:#08191E; --surface:#0F2830; --ink:#E6F3F1; --muted:#93B3B8; --line:#1F4048; --accent:#4FD1C5; --lamp:#F2B632; --on-accent:#08191E; color-scheme:dark;}
+}
+:root[data-theme="dark"]{--bg:#08191E; --surface:#0F2830; --ink:#E6F3F1; --muted:#93B3B8; --line:#1F4048; --accent:#4FD1C5; --lamp:#F2B632; --on-accent:#08191E; color-scheme:dark;}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+*,*::before,*::after{box-sizing:inherit}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.6 Figtree,system-ui,sans-serif}
+a{color:var(--accent);text-underline-offset:3px}
+a:focus-visible,button:focus-visible{outline:3px solid var(--lamp);outline-offset:3px;border-radius:4px}
+.wrap{max-width:960px;margin:0 auto;padding:0 24px}
+header.top{display:flex;justify-content:space-between;align-items:center;padding:20px 0;gap:16px;flex-wrap:wrap}
+header.top strong{font:700 18px 'Bricolage Grotesque',sans-serif}
+nav a{margin-left:18px;color:var(--muted);text-decoration:none;font-weight:500}
+nav a:hover{color:var(--ink)}
+.hero{position:relative;overflow:hidden;padding:56px 0 72px}
+.hero h1{font:800 clamp(48px,11vw,112px)/.95 'Bricolage Grotesque',sans-serif;letter-spacing:-.03em;margin:0 0 20px}
+.hero p{max-width:34em;font-size:20px;color:var(--muted);margin:0 0 28px}
+.btns{display:flex;gap:12px;flex-wrap:wrap}
+.btn{display:inline-block;padding:12px 22px;border-radius:999px;font-weight:600;text-decoration:none;border:2px solid var(--accent)}
+.btn.primary{background:var(--accent);color:var(--on-accent)}
+.btn.ghost{color:var(--accent)}
+.fish{position:absolute;right:-140px;top:34%;width:120px;color:var(--lamp);animation:swim 9s ease-in-out 0.4s 1 forwards;opacity:.95}
+@keyframes swim{0%{transform:translateX(0)}100%{transform:translateX(-120vw)}}
+@media (prefers-reduced-motion:reduce){.fish{animation:none;right:24px;top:12%}html{scroll-behavior:auto}}
+section{padding:48px 0;border-top:1px solid var(--line)}
+h2{font:700 30px 'Bricolage Grotesque',sans-serif;margin:0 0 24px;letter-spacing:-.01em}
+h3{font:700 21px 'Bricolage Grotesque',sans-serif;margin:0 0 6px}
+.project{background:var(--surface);border:1px solid var(--line);border-left:6px solid var(--lamp);border-radius:6px;padding:28px}
+.project p{margin:8px 0 0;max-width:40em}
+.tag{display:inline-block;font-size:14px;font-weight:600;color:var(--muted);margin-bottom:8px}
+.rows>div{display:grid;grid-template-columns:200px 1fr;gap:8px 24px;padding:18px 0;border-bottom:1px solid var(--line)}
+.rows>div:last-child{border-bottom:0}
+.rows .when{color:var(--muted);font-weight:500}
+.rows p{margin:2px 0 0;color:var(--muted)}
+.skills{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:32px}
+ul.chips{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:8px}
+ul.chips li{background:var(--surface);border:1px solid var(--line);border-radius:999px;padding:6px 16px;font-weight:500}
+.skills h3{font-size:18px;margin-bottom:12px}
+footer{padding:40px 0 56px;border-top:1px solid var(--line);color:var(--muted)}
+footer ul{list-style:none;padding:0;margin:0 0 20px;display:flex;gap:24px;flex-wrap:wrap;font-weight:600}
+@media (max-width:640px){.rows>div{grid-template-columns:1fr}nav a{margin:0 14px 0 0}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header class="top">
+  <strong>Kalaiselvan S</strong>
+  <nav aria-label="Sections"><a href="#project">Project</a><a href="#experience">Experience</a><a href="#skills">Skills</a><a href="#education">Education</a><a href="#contact">Contact</a></nav>
+</header>
+
+<main>
+<div class="hero">
+  <svg class="fish" viewBox="0 0 120 60" aria-hidden="true"><path fill="currentColor" d="M8 30c18-24 52-24 78 0l26-20v40L86 30C60 54 26 54 8 30z"/><circle cx="30" cy="27" r="4" fill="#0C2B33"/></svg>
+  <h1>Kalaiselvan S</h1>
+  <p>Second-year Information Technology student in Coimbatore. I build things in C, Python and Java, and I like learning by shipping small projects.</p>
+  <div class="btns">
+    <a class="btn primary" href="#project">See my project</a>
+    <a class="btn ghost" href="#contact">Get in touch</a>
+  </div>
+</div>
+
+<section id="project">
+  <h2>Project</h2>
+  <article class="project">
+    <span class="tag">Team game project</span>
+    <h3>Catch Me If You Dare</h3>
+    <p>A fish game built as a team project. Find the code on my <a href="https://github.com/kalaiselvans19888-star">GitHub</a>.</p>
+  </article>
+</section>
+
+<section id="experience">
+  <h2>Experience</h2>
+  <div class="rows">
+    <div><div class="when">Internship</div><div><h3>CodeAlpha</h3></div></div>
+    <div><div class="when">Internship</div><div><h3>Google</h3></div></div>
+    <div><div class="when">2026</div><div><h3>Unstop hackathon</h3><p>Participant.</p></div></div>
+  </div>
+</section>
+
+<section id="skills">
+  <h2>Skills</h2>
+  <div class="skills">
+    <div><h3>Languages</h3><ul class="chips"><li>C</li><li>Python</li><li>Java</li></ul></div>
+    <div><h3>Certificates</h3><ul class="chips"><li>Python</li><li>C</li><li>Java</li></ul></div>
+    <div><h3>Soft skills</h3><ul class="chips"><li>Communication</li><li>Adaptability</li></ul></div>
+    <div><h3>Courses</h3><ul class="chips"><li>Discrete Mathematics</li><li>DPCO</li><li>DBMS</li><li>DSA</li><li>OOPs</li></ul></div>
+  </div>
+</section>
+
+<section id="education">
+  <h2>Education</h2>
+  <div class="rows">
+    <div><div class="when">2025 – 2029</div><div><h3>B.Tech Information Technology</h3><p>VSB College of Engineering and Technical Campus, Coimbatore. Anna University. CGPA 7.78 / 10.</p></div></div>
+    <div><div class="when">Completed 2025</div><div><h3>Higher Secondary (12th)</h3><p>Srinivasa Vidhyalaya Matric Higher Secondary School, Udumalpet. State Board. 534 / 600.</p></div></div>
+    <div><div class="when">Completed 2023</div><div><h3>Secondary (10th)</h3><p>Srinivasa Vidhyalaya Matric Higher Secondary School, Udumalpet. State Board. 389 / 500.</p></div></div>
+  </div>
+</section>
+</main>
+
+<footer id="contact">
+  <h2>Contact</h2>
+  <ul>
+    <li><a href="mailto:kalaiselvan.s19888@gmail.com">kalaiselvan.s19888@gmail.com</a></li>
+    <li><a href="https://linkedin.com/in/kalai-selvan-41aa2b414">LinkedIn</a></li>
+    <li><a href="https://github.com/kalaiselvans19888-star">GitHub</a></li>
+  </ul>
+  <div>Coimbatore, Tamil Nadu</div>
+</footer>
+</div>
+</body>
+</html>
